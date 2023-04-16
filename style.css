@@ -69,7 +69,7 @@ blockquote {
 
 /* ******* Moje CSS ******* */
 
-/* ******* Sekce 1 ******** */
+/* ------ SEKCE 1 ------ */
 
 .blog {
 	display: grid;
@@ -77,7 +77,10 @@ blockquote {
 	gap: 40px;
 	margin: 0 auto;
 	padding: 10px;
+	max-width: 1080px;
 }
+
+		/* ***** Hlavička *****/
 
 header {
 	grid-column: 2 / 3;
@@ -110,8 +113,11 @@ p {
 	grid-column: 2 / 3;
 }
 
+		/* ***** Levý blok **** */
+
 .tip {
 	color: var(--tmava);
+	width: 200px;
 }
 
 .tip p {
@@ -133,7 +139,9 @@ p {
 	border-right: solid 3px var(--zluta);
 }
 
-/* ****** Sekce 2 (velké foto a dál) ***** */
+/* ------ SEKCE 2 (velké foto a dál) ------ */
+
+		/*  Velké foto */
 
 figure {
 	grid-column: 1 / 4;
@@ -148,6 +156,8 @@ figure img {
 figcaption {
 	color: var(--seda);
 }
+
+		/*  Šedý doprovodný text se zelenými ozdonými  čárkami */
 
 blockquote {
 	color: var(--seda);
@@ -175,6 +185,7 @@ blockquote::after {
 	margin: 20px auto;
 }
 
+		/* ***** Pravý blok ***** */
 
 .tip-vpravo {
 	grid-column: 3 / 4;
@@ -194,7 +205,7 @@ blockquote::after {
 }
 
 
-/* ***** Patička ****** */
+/* ------ Patička ------ */
 
 footer {
 	grid-column: 2 / 3;
