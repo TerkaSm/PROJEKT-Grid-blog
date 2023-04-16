@@ -189,6 +189,7 @@ blockquote::after {
 
 .tip-vpravo {
 	grid-column: 3 / 4;
+	justify-self: end;
 	text-align: left;
 }
 
