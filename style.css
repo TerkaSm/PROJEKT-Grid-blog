@@ -23,17 +23,6 @@ blockquote {
 
 /* --------------------------------------------------- */
 
-/* barvy */
-:root {
-	--svetla: #edf3f5;
-	--seda: #b2bec3;
-	--tmava: #636e72;
-	--oranzova: #ee5a24;
-	--cervena: #ea2027;
-	--zluta: #f79f1f;
-	--zelena: #a3cb38;
-	--limetka: #c4e538;
-}
 
 /*
 	Všimni si, jak jsou zde nadefinované barvy.
@@ -66,3 +55,153 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+/* barvy */
+:root {
+	--svetla: #edf3f5;
+	--seda: #b2bec3;
+	--tmava: #636e72;
+	--oranzova: #ee5a24;
+	--cervena: #ea2027;
+	--zluta: #f79f1f;
+	--zelena: #a3cb38;
+	--limetka: #c4e538;
+}
+
+/* ******* Moje CSS ******* */
+
+/* ******* Sekce 1 ******** */
+
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	gap: 40px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+header {
+	grid-column: 2 / 3;
+}
+
+h1 {
+	color: var(--zelena);
+	font-size: 72px;
+
+}
+
+p {
+	margin: 0;
+}
+
+.meta {
+	color: var(--seda);
+	margin-top: 60px;
+	margin-bottom: 0;
+}
+
+h2 {
+	color: var(--zelena);
+	font-size: 48px;
+
+	grid-column: 2 / 3;
+}
+
+p {
+	grid-column: 2 / 3;
+}
+
+.tip {
+	color: var(--tmava);
+}
+
+.tip p {
+	margin: 0;
+	background-color: var(--svetla);
+	padding: 20px;
+}
+
+.tip a {
+	color: var(--cervena);
+}
+
+.tip-vlevo {
+	grid-column: 1 / 2;
+	text-align: right;
+}
+
+.tip-vlevo p {
+	border-right: solid 3px var(--zluta);
+}
+
+/* ****** Sekce 2 (velké foto a dál) ***** */
+
+figure {
+	grid-column: 1 / 4;
+	max-width: 100%;
+	margin: 0;
+}
+
+figure img {
+	width: 100%;
+}
+
+figcaption {
+	color: var(--seda);
+}
+
+blockquote {
+	color: var(--seda);
+	font-size: 36px;
+	text-align: center;
+	grid-column: 1 / -1;
+	margin: 0;
+}
+
+blockquote::before {
+	content: " ";
+	display: block;
+	height: 3px;
+	width: 100px;
+	background-color: var(--limetka);
+	margin: 20px auto;
+}
+
+blockquote::after {
+	content: " ";
+	display: block;
+	height: 3px;
+	width: 100px;
+	background-color: var(--limetka);
+	margin: 20px auto;
+}
+
+
+.tip-vpravo {
+	grid-column: 3 / 4;
+	text-align: left;
+}
+
+.tip-vpravo p {
+	border-left: solid 3px var(--zluta);
+}
+
+.tip img {
+	width: 200px;
+	padding: 20px 20px 0 20px;
+	background-color: var(--svetla);
+	border-right: solid 3px var(--zluta);
+	display: block;
+}
+
+
+/* ***** Patička ****** */
+
+footer {
+	grid-column: 2 / 3;
+	color: var(--seda);
+	font-size: 14px;
+}
+
+footer a {
+	color: var(--seda);
+}
